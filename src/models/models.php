@@ -1,16 +1,31 @@
 <?php
     // Retorna as tarefas da sessão ou inicia um array vazio
-    function getTaskx(){
+    function getTasks(){
         // Digite o seu código aqui
+        return $_SESSION['tasks'] ?? [];
     }
 
     // Adiciona uma nova task no array
     function addNewTask($description){
         // Seu código aqui
+        $tasks = getTasks();
+        $tasks[] = [
+            'id' => count($tasks) +1,
+            'description' => $description,
+            'completed' => false
+        ];
+        $_SESSION['$tasks'] = $tasks;
     }
 
     // Marca uma task como concluida
     function ToggleTask($id){
         // Seu código aqui
+        $tasks = getTaskS();
+        foreach($tasks as $index => $task){
+            if($task['id'] == $id){
+                $tasks[$index]['completed'] = !$tasks['completed'];
+                break;
+            }
+        }
     }
 ?>
