@@ -11,4 +11,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     handleRequest();
 }
 //exibir a lista de tarefas
+showTasks();
+
 ?>
