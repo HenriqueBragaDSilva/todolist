@@ -22,23 +22,11 @@
 
     <!-- Lista de tarefas -->
      <ul class="list-group">
-        <li class="list-group-item d-flex align-items-center">
-          <form action="" class="me-3">
-            <input type="hidden" name="action" value="toggle"/>
-            <input type="hidden" name="id" value="id_do_item"/>
-            <input type="checkbox" class="form-check-input"/>
-          </form>
-          <span>Tarefa pendente 0001</span>
-        </li>
-
-        <li class="list-group-item d-flex align-items-center">
-          <form action="" class="me-3">
-            <input type="hidden" name="action" value="toggle"/>
-            <input type="hidden" name="id" value="id_do_item"/>
-            <input type="checkbox" class="form-check-input"/>
-          </form>
-          <span>Tarefa pendente 0001</span>
-        </li>
+      <?php if(empty($tasks)): ?>
+      <li class="list-group-item text-center text-mutted">
+          Nenhuma tarefa adicionada
+      </li> 
+      <?php endif; ?>
      </ul>
     </div>
 </body>
