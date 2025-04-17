@@ -14,6 +14,7 @@
             'description' => $description,
             'completed' => false
         ];
+        
         $_SESSION['$tasks'] = $tasks;
     }
 
@@ -27,5 +28,6 @@
                 break;
             }
         }
+        $_SESSION['tasks'] = $tasks;
     }
 ?>
